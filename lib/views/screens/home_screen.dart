@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
     final double h = MediaQuery.of(context).size.height ;
     final double w = MediaQuery.of(context).size.width ;
     scrollController.addListener(detectingEdgeListner);
-   
+    print(latch.toString());
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -44,8 +44,13 @@ class HomeScreen extends StatelessWidget {
           itemCount: usersProvider.users.length + 1,
           controller: scrollController,
           itemBuilder: (context, index) {
-            if (index ==  usersProvider.users.length){
-              return usersProvider.isLoading ? const Center(child:  CircularProgressIndicator()) : Container();
+            if (index >=  usersProvider.users.length){
+              return usersProvider.isLoading ? const Center(child:  CircularProgressIndicator()) 
+              : Container(
+                height: h *0.2,
+                alignment: Alignment.bottomCenter,
+                child: const Text("you reached the end!"),
+              );
             }
             return UsersListItem(
               currentUser: usersProvider.users[index],

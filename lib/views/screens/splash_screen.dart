@@ -31,7 +31,8 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed( Duration.zero).then((value) async{
       try{
         UsersProvider usersProvider = Provider.of<UsersProvider>(context, listen: false);
-        await usersProvider.getUsers();      
+        await usersProvider.getUsers(); 
+        await Future.delayed(const Duration(seconds: 1));     
         // ignore: use_build_context_synchronously
         nextScreenCloseOthers(context,  HomeScreen());
       }catch(e){
@@ -48,8 +49,6 @@ class _SplashScreenState extends State<SplashScreen> {
     t.cancel();
     super.dispose();
   }
-
-  
 
 
   @override

@@ -23,6 +23,7 @@ class UsersListItem extends StatelessWidget {
           child: Row(
             children: [ 
               CircleAvatar(
+                backgroundColor: Theme.of(context).primaryColor,
                 backgroundImage: NetworkImage(currentUser.avatar,),
                 radius: 30,
               ),
