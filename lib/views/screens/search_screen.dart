@@ -84,7 +84,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(backgroundColor: Theme.of(context).primaryColor),
                         onPressed: (){
-                          //search();
+                          usersProvider.searchForUser(textEditingController.text);
                       }, child: const Text("Search")),
                     ),
                   
