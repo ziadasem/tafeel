@@ -1,0 +1,47 @@
+name: tafeel
+description: Users Displaying Screen.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.2 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  http: ^1.1.0
+  provider: ^6.1.1
+  font_awesome_flutter: ^10.6.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  mockito: ^5.1.0
+  build_runner: ^2.1.7
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+     - assets/images/
+  #   - images/a_dot_ham.jpeg
+
+
+  fonts:
+     - family: Cairo
+       fonts:
+         - asset: assets/fonts/Cairo-Black.ttf
+         - asset: assets/fonts/Cairo-Bold.ttf
+         - asset: assets/fonts/Cairo-ExtraBold.ttf
+         - asset: assets/fonts/Cairo-ExtraLight.ttf
+         - asset: assets/fonts/Cairo-Light.ttf
+         - asset: assets/fonts/Cairo-Medium.ttf
+         - asset: assets/fonts/Cairo-Regular.ttf
+         - asset: assets/fonts/Cairo-SemiBold.ttf
+
